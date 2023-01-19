@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+:root {
+  --header-height: 4.5rem;
+
+  /* Cores utilizadas */
+  --base-color: #a6b1e1;
+  --body-color: #f4eeff;
+  --header-color: #dcd6f7;
+  --text-color: #424874;
+
+  /* Fontes utilizadas */
+  --body-font: 'Nunito', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+  
+  /* Tamanhos de fontes utilizadas */
+  --title: 1.875rem;
+  --subtitle: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 1rem var(--body-font);
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+i {
+  padding-right: 0.5rem
+}
+
+/* Cabeçalho */
+#header {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-bottom: 1px solid #e4e4e4;
+  display: flex;
+  width: 100%;
+  background: var(--header-color);
+}
+
+/* logomarca */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  font: 700 1.31rem var(--title-font);
+  color: var(--text-color);
+}
+
+.logo span {
+  color: white;
+}
+
+/* Menu */
+nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: white;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--base-color);
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+  width: 40vw;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.05rem solid rgba(0,0,0,0.2);
+  outline: none;
+}
+
+#text-input,
+#text-output {
+  height: 60vh;
+  color: var(--text-color);
+  text-align: justify;
+  font-size: 1.25rem;
+}
+
+
+
+
+.buttons {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 0.5rem;
+}
+
+#btn-encrypt,
+#btn-copy {
+  background: var(--text-color);
+}
+
+#btn-decrypt,
+#btn-clear {
+  background: var(--base-color);
+}
