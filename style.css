@@ -189,3 +189,83 @@ textarea {
 #btn-clear {
   background: var(--base-color);
 }
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(270deg, var(--text-color) 0%, var(--header-color) 100%);
+}
+
+.text-about {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.images img {
+  width: 15rem;
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(270deg, var(--header-color) 0%, var(--text-color) 100% );
+}
+
+footer {
+  background: var(--header-color);
+}
+
+footer.section {
+  padding: 1rem 0;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .social {
+  display: flex;
+  width: 20rem;
+  justify-content: space-around;
+}
+
+footer .social a {
+  display: inline-block;
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  transform: translateY(-5px);
+}
+
+footer i {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+footer .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+footer .logo .icon-encrypted {
+  padding-right: 1rem;
+  font-size: 2rem;
+}
