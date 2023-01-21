@@ -160,8 +160,38 @@ textarea {
   font-size: 1.25rem;
 }
 
+#text-output {
+  background: url(./img/output.svg);
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 50%;
+  background-position: center;
+  transition: all 250ms ease-in-out;
+}
 
+#text-output::placeholder {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.25rem;
+  padding-top: 18rem;
+}
 
+ul#error {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+ul#error li {
+  list-style: none;
+  margin-top: 15px;
+}
+
+#error li::before {
+  content: url(./img/warning.svg);
+  filter: invert(1);
+  margin-right: 0.3rem;
+}
 
 .buttons {
   display: flex;
@@ -224,16 +254,19 @@ footer.section {
   padding: 1rem 0;
 }
 
-footer .container {
+footer .container  {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin: 2rem auto;
 }
 
 footer .social {
   display: flex;
   width: 20rem;
   justify-content: space-around;
+  margin-bottom: 1rem;
 }
 
 footer .social a {
@@ -268,4 +301,32 @@ footer .logo {
 footer .logo .icon-encrypted {
   padding-right: 1rem;
   font-size: 2rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(232,237,252);
+  text-align: center;
+}
+
+.show-modal {
+  display: block;
+}
+
+.modal p {
+  display: inline-block;
+  margin-top: 40vh;
+  background-color: #0a3871;
+  color: white;
+  margin: inherit auto;
+  padding: 3vh 5vw;
+  border-radius: 0.5rem;
+}
+
+.remove-background {
+  background-size: 0% !important;
 }
