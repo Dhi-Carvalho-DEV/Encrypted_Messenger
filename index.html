@@ -44,12 +44,11 @@
           <div class="input">
             <h2>Digite sua mensagem:</h2>
             <textarea id="text-input"></textarea>
-            <ul></ul>
             <div class="buttons">
-              <button id="btn-encrypt">
+              <button id="btn-encrypt" class="blocked">
                 <i class="icon-lock"></i>Criptografar
               </button>
-              <button id="btn-decrypt">
+              <button id="btn-decrypt" class="blocked">
                 <i class="icon-unlocked"></i>Descriptografar
               </button>
             </div>
@@ -59,8 +58,12 @@
             <h2>Mensagem criptografada:</h2>
             <textarea id="text-output"></textarea>
             <div class="buttons">
-              <button id="btn-copy"><i class="icon-copy"></i> Copiar</button>
-              <button id="btn-clear"><i class="icon-clear"></i> Limpar</button>
+              <button id="btn-copy" class="blocked">
+                <i class="icon-copy"></i> Copiar
+              </button>
+              <button id="btn-clear" class="blocked">
+                <i class="icon-clear"></i> Limpar
+              </button>
             </div>
           </div>
         </div>
@@ -93,7 +96,7 @@
               nos fornecer conhecimentos sobre a utilização do
               <strong>Trello</strong> como ferramenta de acompanhamento de
               desenvolvimento e utilização do <strong>Git/ Github</strong> para
-              o versionamneto de código.
+              o versionamento de código.
             </p>
           </div>
           <div class="images">
@@ -134,10 +137,11 @@
       </div>
     </footer>
 
-    <div>
-      <p></p>
+    <div id="modal-copy" class="modal">
+      <p id="modal-copy-text"></p>
+      <ul id="error"></ul>
     </div>
 
-    <script src="/main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
