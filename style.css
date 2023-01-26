@@ -31,6 +31,7 @@ ul {
   --body-color: #f4eeff;
   --header-color: #dcd6f7;
   --text-color: #424874;
+  --warning-color: #FF6347;
 
   /* Fontes utilizadas */
   --body-font: 'Nunito', sans-serif;
@@ -122,6 +123,26 @@ nav ul li a.active::after {
   width: 100%;
 }
 
+#error {
+  margin-top: 1rem;
+}
+
+#error li {
+  color: var(--warning-color);
+  background-color: var(--header-color);
+  margin: inherit auto;
+  padding: 3vh 5vw;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--warning-color);
+}
+
+#error li::before{
+  content: "\ea08";
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
 .section {
   display: flex;
   gap: 2.5rem;
@@ -174,23 +195,6 @@ textarea {
   text-align: center;
   font-size: 1.25rem;
   padding-top: 18rem;
-}
-
-ul#error {
-  color: var(--text-color);
-  text-align: center;
-  font-size: 1.25rem;
-}
-
-ul#error li {
-  list-style: none;
-  margin-top: 15px;
-}
-
-#error li::before {
-  content: url(./img/warning.svg);
-  filter: invert(1);
-  margin-right: 0.3rem;
 }
 
 .buttons {

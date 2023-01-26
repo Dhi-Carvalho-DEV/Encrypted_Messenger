@@ -13,10 +13,12 @@
   <body>
     <header id="header">
       <nav class="container">
-        <h1 class="logo">
-          <i class="icon-encrypted"></i>Encrypted
-          <span>Messenger</span>
-        </h1>
+        <a href="index.html">
+          <h1 class="logo">
+            <i class="icon-encrypted"></i>Encrypted
+            <span>Messenger</span>
+          </h1>
+        </a>
         <div class="menu">
           <ul class="grid">
             <li>
@@ -38,6 +40,7 @@
     </header>
 
     <main>
+      <ul id="error"></ul>
       <section id="home" class="section">
         <div class="fields">
           <!-- Entrada de texto para criptografia e descriptografia-->
@@ -56,7 +59,10 @@
           <!-- Saída do texto para encriptografado-->
           <div class="output">
             <h2>Mensagem criptografada:</h2>
-            <textarea id="text-output"></textarea>
+            <textarea
+              id="text-output"
+              placeholder="Nenhuma mensagem encontrada"
+            ></textarea>
             <div class="buttons">
               <button id="btn-copy" class="blocked">
                 <i class="icon-copy"></i> Copiar
@@ -139,7 +145,6 @@
 
     <div id="modal-copy" class="modal">
       <p id="modal-copy-text"></p>
-      <ul id="error"></ul>
     </div>
 
     <script src="./main.js"></script>
